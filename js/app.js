@@ -1,38 +1,47 @@
-function submitAnswers() {
-    var total = 5;
-    var score = 0;
+function check() {
 
-    //get user input
-    var q1 = document.forms["quizForm"]["q1"].value;
-    var q2 = document.forms["quizForm"]["q2"].value;
-    var q3 = document.forms["quizForm"]["q3"].value;
-    var q4 = document.forms["quizForm"]["q4"].value;
-    var q5 = document.forms["quizForm"]["q5"].value;
+    // Variables
+    var question1 = document.quiz.question1.value;
+    var question2 = document.quiz.question2.value;
+    var question3 = document.quiz.question3.value;
+    var correct = 0;
 
-    //validation
-    for (var i = 1; i <= total; i++) {
-        if (eval('q' + i) == null || eval('q' + i) == '') {
-            alert("You missed question " + i);
-            return false;
-        };
-    };
+    // Validation
+    if (question1 == "Springfield" || question1 == "springfield") {
+        correct++;
+    }
+    if (question2 == "Sacramento" || question2 == "sacramento") {
+        correct++;
+    }
+    if (question3 == "Tallahassee" || question3 == "tallahassee") {
+        correct++;
+    }
 
-    //set correct answers
-    var answers = ["b", "a", "d", "b", "d"];
+    var messages = ["Gret Job!", "That's just okay", "You really need to do better"];
+    var pictures = ["../img/yes.gif", "../img/meh.gif", "../img/no.gif"];
 
-    //check answers
-    for (var i = 1; i <= total; i++) {
-        if (eval('q' + i) == answers[i - 1]) {
-            score++;
-        };
-    };
+    var range;
 
-    //display results
-    var results = document.getElementById('results');
-    results.innerHTML = "<h3>You Scored <span>" + score + "</span> out of <span>" + total + "</span> questions correct!</h3>";
+    if (correct == 0 || correct == 1) {
+        range = 2;
+        document.getElementById("after-submit").style.backgroundColor = "red";
+    }
 
-    alert("You answered " + score + " out of " + total + " questions correct!");
+    if (correct == 2) {
+        range = 1;
+        document.getElementById("after-submit").style.backgroundColor = "orange";
+    }
 
-    return false;
+    if (correct == 3) {
+        range = 0;
+        document.getElementById("after-submit").style.backgroundColor = "green";
+    }
+
+    document.getElementById("after-submit").style.visibility = "visible";
+
+    // Text Content
+    document.getElementById("message").innerHTML = messages[range];
+    document.getElementById("number-correct").innerHTML = "<p>You got " + correct + " correct.</p>"
+    document.getElementById("picture").src = pictures[range];
 
 };
