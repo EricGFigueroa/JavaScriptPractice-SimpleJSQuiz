@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html class="no-js" lang="en">
+
+<head>
+    <title>Learn JavaScript | Build Simple JS Quiz</title>
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="container">
+
+        <header>
+            <h1>
+                Simple JavaScript Quiz
+            </h1>
+            <p>
+                Test Your Knowledge in <strong>JavaScript Fundamentals</strong>
+            </p>
+        </header>
+
+        <section>
+            <div id="results"></div>
+            <form name="quizForm" onsubmit="return submitAnswers()">
+                <h3>
+                    1) In which HTML element do we insert JavaScript code?
+                </h3>
+                <label>
+                    <input id="q1a" type="radio" name="q1" value="a">a. &lt;js&gt;<br>
+                </label>
+                <label>
+                    <input id="q1b" type="radio" name="q1" value="b">b. &lt;script&gt;<br>
+                </label>
+                <label>
+                    <input id="q1c" type="radio" name="q1" value="c">c. &lt;body&gt;<br>
+                </label>
+                <label>
+                    <input id="q1d" type="radio" name="q1" value="d">d. &lt;link&gt;<br>
+                </label>
+                <!-- End of Question #1 -->
+                <h3>
+                    2) Which HTML attribute is used to reference an external JavaScript file?
+                </h3>
+                <label>
+                    <input id="q2a" type="radio" name="q2" value="a">a. src<br>
+                </label>
+                <label>
+                    <input id="q2b" type="radio" name="q2" value="b">b. rel<br>
+                </label>
+                <label>
+                    <input id="q2c" type="radio" name="q2" value="c">c. type<br>
+                </label>
+                <label>
+                    <input id="q2d" type="radio" name="q2" value="d">d. href<br>
+                </label>
+                <!-- End of Question #2 -->
+                <h3>
+                    3) How would you write "Hellow in an alert box?
+                </h3>
+                <label>
+                    <input id="q3a" type="radio" name="q3" value="a">a. msg("Hello");<br>
+                </label>
+                <label>
+                    <input id="q3b" type="radio" name="q3" value="b">b. alertBox("Hello");<br>
+                </label>
+                <label>
+                    <input id="q3c" type="radio" name="q3" value="c">c. document.write("Hello");<br>
+                </label>
+                <label>
+                    <input id="q3d" type="radio" name="q3" value="d">d. alert("Hello");<br>
+                </label>
+                <!-- End of Question #3 -->
+                <h3>
+                    4) JavaScript is directly related to the "Java" programming language?
+                </h3>
+                <label>
+                    <input id="q4a" type="radio" name="q4" value="a">a. True<br>
+                </label>
+                <label>
+                    <input id="q4b" type="radio" name="q4" value="b">b. False<br>
+                </label>
+                <!-- End of Question #4 -->
+                <h3>
+                    5) A variable in JavaScript must start with which special character?
+                </h3>
+                <label>
+                    <input id="q5a" type="radio" name="q5" value="a">a. @<br>
+                </label>
+                <label>
+                    <input id="q5b" type="radio" name="q5" value="b">b. $<br>
+                </label>
+                <label>
+                    <input id="q5c" type="radio" name="q5" value="c">c. #<br>
+                </label>
+                <label>
+                    <input id="q5d" type="radio" name="q5" value="d">d. No Special Character<br>
+                </label>
+                <!-- End of Question #5 -->
+                <br>
+                <br>
+                <button type="submit" name="button" value="submitAnswers">Submit Answers</button>
+            </form>
+        </section>
+
+    </div>
+
+    <footer>
+        <p>
+            Copyright&copy; 2018, All Rights Reserved
+        </p>
+    </footer>
+
+    <!-- Custom JS -->
+    <script type="text/javascript" src="js/app.js">
+    </script>
+</body>
+
+</html>

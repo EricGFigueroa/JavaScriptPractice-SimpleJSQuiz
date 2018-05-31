@@ -1,0 +1,54 @@
+* {
+  outline: none;
+  list-style: none;
+  text-decoration: none;
+  box-sizing: border-box; }
+
+body {
+  color: white;
+  font-size: 14px;
+  font-family: monsterrat, arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: orange; }
+
+#container {
+  width: 70%;
+  margin: 20px auto;
+  padding: 25px;
+  overflow: auto;
+  background-color: #199fdb; }
+  #container header {
+    text-align: center;
+    border-bottom: dashed 1px white; }
+    #container header h1 {
+      margin: 0;
+      padding: 0; }
+    #container header p {
+      margin: 1rem 0; }
+  #container section {
+    min-height: 400px; }
+    #container section #results {
+      text-align: center;
+      background: orange; }
+      #container section #results h3 {
+        font-weight: 300;
+        padding: 0.5rem 0; }
+      #container section #results span {
+        font-size: 1.5rem;
+        font-weight: bold; }
+    #container section form button {
+      color: white;
+      font-size: 0.9rem;
+      padding: 0.75rem 1.5rem;
+      border: none;
+      background-color: orange;
+      cursor: pointer; }
+
+footer {
+  width: 100%;
+  text-align: center;
+  padding: 0.5rem 0;
+  position: absolute;
+  bottom: 0;
+  background-color: #199fdb; }
